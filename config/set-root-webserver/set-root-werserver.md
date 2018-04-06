@@ -1,4 +1,5 @@
-# Backup Original file : /etc/apache2/sites-available/000-default.conf
+## Backup Original file : /etc/apache2/sites-available/000-default.conf
+```shell
 <VirtualHost *:80>
         # The ServerName directive sets the request scheme, hostname and port that
         # the server uses to identify itself. This is used when creating
@@ -31,7 +32,11 @@
 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 
-# Backup Original file : /etc/apache2/sites-available/default-ssl.conf
+```
+
+## Backup Original file : /etc/apache2/sites-available/default-ssl.conf
+
+```shell
 <IfModule mod_ssl.c>
         <VirtualHost _default_:443>
                 ServerAdmin webmaster@localhost
@@ -43,10 +48,13 @@
                 # It is also possible to configure the loglevel for particular
                 # modules, e.g.
                 #LogLevel info ssl:warn
-...............................................................etc
+                .....
+```
 
 ## Config 2 File default-ssl.conf (For Default SSL) & 000-default.conf (Default Folder)
-### /etc/apache2/sites-available/000-default.conf
+in: **/etc/apache2/sites-available/000-default.conf**, File ini akan merubah arah default root folder Apache2 ke arah yang sudah ditentukan seperti dalam file sourceshell dibawah ini
+
+```shell
 <VirtualHost *:80>
         # The ServerName directive sets the request scheme, hostname and port that
         # the server uses to identify itself. This is used when creating
@@ -85,8 +93,11 @@
 </VirtualHost>
 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+```
 
-### /etc/apache2/sites-available/default.conf
+in: **/etc/apache2/sites-available/default.conf**, kemudian pada file ini mengizinkan agar dapat diakses menggunakan SSL sehingga dapat diakses menggunakan protocol **https** & **http**
+
+```shell
 <IfModule mod_ssl.c>
         <VirtualHost _default_:443>
                 ServerAdmin webmaster@localhost
@@ -115,8 +126,17 @@
                 # after it has been globally disabled with "a2disconf".
                 #Include conf-available/serve-cgi-bin.conf
 ...............................................................etc
+```
 
-CTRL + X -> Y -> Enter (For Save)
+**CTRL + X** -> tekan tombol **Y** pada keyboard -> kemudian tekan  **Enter (For Save)**<br><br>
+
+Sebelumnya izinkan akses untuk mengakses folder yang sudah kita arahkan tadi kedefault root pilihan kita dengan cara seperti dibaweah ini
+
+```shell
+sudo chmod 777 /media/command/
+```
+<br>
+Pada bagian ini kita harus merestart service Apache2
 
 ```shell
 command@army:~$ sudo /etc/init.d/apache2 restart 
