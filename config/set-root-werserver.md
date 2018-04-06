@@ -52,7 +52,7 @@
 ```
 
 ## Config 2 File default-ssl.conf (For Default SSL) & 000-default.conf (Default Folder)
-in: /etc/apache2/sites-available/000-default.conf
+in: **/etc/apache2/sites-available/000-default.conf**
 
 ```shell
 <VirtualHost *:80>
@@ -95,7 +95,7 @@ in: /etc/apache2/sites-available/000-default.conf
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
-### /etc/apache2/sites-available/default.conf
+in: **/etc/apache2/sites-available/default.conf**
 
 ```shell
 <IfModule mod_ssl.c>
