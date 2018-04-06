@@ -130,7 +130,7 @@ in: **/etc/apache2/sites-available/default.conf**, kemudian pada file ini mengiz
 
 **CTRL + X** -> tekan tombol **Y** pada keyboard -> kemudian tekan  **Enter (For Save)**<br><br>
 
-sebelumnya izinkan akses untuk mengakses folder yang sudah kita arahkan tadi kedefault root pilihan kita dengan cara seperti dibaweah ini
+Sebelumnya izinkan akses untuk mengakses folder yang sudah kita arahkan tadi kedefault root pilihan kita dengan cara seperti dibaweah ini
 
 ```shell
 sudo chmod 777 /media/command/
