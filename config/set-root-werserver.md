@@ -52,7 +52,7 @@
 ```
 
 ## Config 2 File default-ssl.conf (For Default SSL) & 000-default.conf (Default Folder)
-in: **/etc/apache2/sites-available/000-default.conf**
+in: **/etc/apache2/sites-available/000-default.conf**, File ini akan merubah arah default root folder Apache2 ke arah yang sudah ditentukan seperti dalam file sourceshell dibawah ini
 
 ```shell
 <VirtualHost *:80>
@@ -95,7 +95,7 @@ in: **/etc/apache2/sites-available/000-default.conf**
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
-in: **/etc/apache2/sites-available/default.conf**
+in: **/etc/apache2/sites-available/default.conf**, kemudian pada file ini mengizinkan agar dapat diakses menggunakan SSL sehingga dapat diakses menggunakan protocol **https** & **http**
 
 ```shell
 <IfModule mod_ssl.c>
@@ -128,7 +128,15 @@ in: **/etc/apache2/sites-available/default.conf**
 ...............................................................etc
 ```
 
-**CTRL + X** -> tekan tombol **Y** pada keyboard -> kemudian tekan  **Enter (For Save)**
+**CTRL + X** -> tekan tombol **Y** pada keyboard -> kemudian tekan  **Enter (For Save)**<br><br>
+
+sebelumnya izinkan akses untuk mengakses folder yang sudah kita arahkan tadi kedefault root pilihan kita dengan cara seperti dibaweah ini
+
+```shell
+sudo chmod 777 /media/command/
+```
+<br>
+Pada bagian ini kita harus merestart service Apache2
 
 ```shell
 command@army:~$ sudo /etc/init.d/apache2 restart 
