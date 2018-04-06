@@ -1,4 +1,5 @@
-# Backup Original file : /etc/apache2/sites-available/000-default.conf
+## Backup Original file : /etc/apache2/sites-available/000-default.conf
+```shell
 <VirtualHost *:80>
         # The ServerName directive sets the request scheme, hostname and port that
         # the server uses to identify itself. This is used when creating
@@ -30,8 +31,10 @@
 </VirtualHost>
 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+```
 
-# Backup Original file : /etc/apache2/sites-available/default-ssl.conf
+## Backup Original file : /etc/apache2/sites-available/default-ssl.conf
+```shell
 <IfModule mod_ssl.c>
         <VirtualHost _default_:443>
                 ServerAdmin webmaster@localhost
