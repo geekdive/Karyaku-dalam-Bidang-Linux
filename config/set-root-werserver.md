@@ -31,9 +31,11 @@
 </VirtualHost>
 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+
 ```
 
 ## Backup Original file : /etc/apache2/sites-available/default-ssl.conf
+
 ```shell
 <IfModule mod_ssl.c>
         <VirtualHost _default_:443>
@@ -46,10 +48,13 @@
                 # It is also possible to configure the loglevel for particular
                 # modules, e.g.
                 #LogLevel info ssl:warn
-...............................................................etc
+                .....
+```
 
 ## Config 2 File default-ssl.conf (For Default SSL) & 000-default.conf (Default Folder)
-### /etc/apache2/sites-available/000-default.conf
+in: /etc/apache2/sites-available/000-default.conf
+
+```shell
 <VirtualHost *:80>
         # The ServerName directive sets the request scheme, hostname and port that
         # the server uses to identify itself. This is used when creating
@@ -88,8 +93,11 @@
 </VirtualHost>
 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+```
 
 ### /etc/apache2/sites-available/default.conf
+
+```shell
 <IfModule mod_ssl.c>
         <VirtualHost _default_:443>
                 ServerAdmin webmaster@localhost
@@ -118,8 +126,9 @@
                 # after it has been globally disabled with "a2disconf".
                 #Include conf-available/serve-cgi-bin.conf
 ...............................................................etc
+```
 
-CTRL + X -> Y -> Enter (For Save)
+**CTRL + X** -> tekan tombol **Y** pada keyboard -> kemudian tekan  **Enter (For Save)**
 
 ```shell
 command@army:~$ sudo /etc/init.d/apache2 restart 
